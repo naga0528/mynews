@@ -7,7 +7,8 @@ use App\Http\Controllers\Controller;
 
 class ProfileController extends Controller
 {
-    //
+    //課題問題５
+    //10章　課題４　ControllerとViewが連携
     public function add()
     {
         return view('admin.profile.create');
@@ -18,6 +19,7 @@ class ProfileController extends Controller
         return redirect('admin/profile/create');
     }
 
+    //10章　課題４　ControllerとViewが連携
     public function edit()
     {
         return view('admin.profile.edit');
