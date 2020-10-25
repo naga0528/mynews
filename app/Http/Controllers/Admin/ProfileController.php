@@ -1,14 +1,11 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
-
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\profile;
 
 class ProfileController extends Controller
 {
-    //課題問題５
-    //10章　課題４　ControllerとViewが連携
     public function add()
     {
         return view('admin.profile.create');
@@ -19,7 +16,6 @@ class ProfileController extends Controller
         return redirect('admin/profile/create');
     }
 
-    //10章　課題４　ControllerとViewが連携
     public function edit()
     {
         return view('admin.profile.edit');
@@ -29,4 +25,17 @@ class ProfileController extends Controller
     {
         return redirect('admin/profile/edit');
     }
+    public function profile(Request $request)
+    {
+      $this->validate($request, Profile::$rules);
+      $profile = new Profile;
+      $form = $request->all();
+      
+      unset($form['_token']);
+      
+      $profile->fill($form);
+      $profile->save();
+      return redirect('admin/profile/create');
+  }
 }
+
