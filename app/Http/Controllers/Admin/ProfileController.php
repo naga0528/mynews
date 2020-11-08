@@ -44,7 +44,6 @@ class ProfileController extends Controller
     {
       // Validationをかける
       $this->validate($request, Profile::$rules);
-      // News Modelからデータを取得する
       $profile = Profile::find($request->id);
       // 送信されてきたフォームデータを格納する
       $profile_form = $request->all();
