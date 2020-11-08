@@ -36,7 +36,7 @@
                                 <th width="10%">名前</th>
                                 <th width="10%">性別</th>
                                 <th width="10%">趣味</th>
-                                <th width="40%">自己紹介</th>
+                                <th width="40%">意気込み</th>
                                 <th width="10%">作成日</th>
                                 <th width="10%">編集</th>
                             </tr>

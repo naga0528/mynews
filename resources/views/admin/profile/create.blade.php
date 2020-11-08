@@ -39,7 +39,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2">自己紹介欄</label>
+                        <label class="col-md-2">今回の意気込み</label>
                         <div class="col-md-10">
                             <textarea class="form-control" name="introduction" rows="20">{{ old('introduction') }}</textarea>
                         </div>
